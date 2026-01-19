@@ -24,6 +24,14 @@ function Home() {
     totalPlayers: 0,
     tokensPlayed: 0,
   })
+  
+  // Animated counter values
+  const [animatedStats, setAnimatedStats] = useState({
+    inProgressMatchups: 0,
+    completedMatchups: 0,
+    totalPlayers: 0,
+    tokensPlayed: 0,
+  })
 
   // Fetch real stats from Supabase
   useEffect(() => {
@@ -40,6 +48,42 @@ function Home() {
 
     return () => unsubscribe()
   }, [])
+  
+  // Animate counters when stats change
+  useEffect(() => {
+    const duration = 1500 // 1.5 seconds
+    const steps = 40
+    const interval = duration / steps
+    
+    const targets = {
+      inProgressMatchups: stats.inProgressMatchups,
+      completedMatchups: stats.completedMatchups,
+      totalPlayers: stats.totalPlayers,
+      tokensPlayed: stats.tokensPlayed,
+    }
+    
+    let step = 0
+    const timer = setInterval(() => {
+      step++
+      const progress = step / steps
+      // Ease out cubic for smooth deceleration
+      const easeOut = 1 - Math.pow(1 - progress, 3)
+      
+      setAnimatedStats({
+        inProgressMatchups: Math.round(targets.inProgressMatchups * easeOut),
+        completedMatchups: Math.round(targets.completedMatchups * easeOut),
+        totalPlayers: Math.round(targets.totalPlayers * easeOut),
+        tokensPlayed: Math.round(targets.tokensPlayed * easeOut),
+      })
+      
+      if (step >= steps) {
+        clearInterval(timer)
+        setAnimatedStats(targets) // Ensure final values are exact
+      }
+    }, interval)
+    
+    return () => clearInterval(timer)
+  }, [stats])
 
   // User stats
   const [userStats] = useState({
@@ -302,9 +346,9 @@ function Home() {
         <div className="nav-right">
           <div className="live-players">
             <span className="live-pulse"></span>
-            <span className="live-count">{formatNumber(stats.inProgressMatchups)}</span>
+            <span className="live-count counter-animate">{formatNumber(animatedStats.inProgressMatchups)}</span>
             <span className="live-label">live matchups</span>
-          </div>
+        </div>
           <a href={TESTFLIGHT_URL} target="_blank" rel="noopener noreferrer" className="nav-cta">Download</a>
         </div>
       </nav>
@@ -358,8 +402,8 @@ function Home() {
               <span className="reward-label">FEEDBACK REWARD</span>
               <div className="reward-amount">🎁 Get Rewarded!</div>
               <span className="reward-note">Credited after call completion</span>
-            </div>
-
+          </div>
+          
             <a href={TESTFLIGHT_URL} target="_blank" rel="noopener noreferrer" className="beta-cta">
               Download App to Join →
             </a>
@@ -371,41 +415,41 @@ function Home() {
         {/* Hero Section */}
         <section className="hero">
           <div className="hero-left animate-on-scroll">
-            <h1 className="hero-title">
+          <h1 className="hero-title">
               <span>Predict.</span>
               <span>Compete.</span>
               <span className="gradient-text">Win Big.</span>
-            </h1>
-            
-            <p className="hero-subtitle">
+          </h1>
+          
+          <p className="hero-subtitle">
               Challenge other players to predict the answer to 5 sports questions. 
               Get more right than your opponent and take home the prize. 
-              It's you vs them — may the best predictor win.
-            </p>
+            It's you vs them — may the best predictor win.
+          </p>
+
+            <div className="hero-stats">
+              <div className="hero-stat">
+                <span className="stat-value counter-animate">{formatNumber(animatedStats.completedMatchups)}</span>
+                <span className="stat-label">Matchups Completed</span>
+              </div>
+              <div className="hero-stat">
+                <span className="stat-value counter-animate">{formatNumber(animatedStats.totalPlayers)}</span>
+                <span className="stat-label">Total Players</span>
+              </div>
+              <div className="hero-stat">
+                <span className="stat-value counter-animate">{formatNumber(animatedStats.tokensPlayed)}</span>
+                <span className="stat-label">Tokens Played</span>
+              </div>
+            </div>
 
             <div className="hero-actions">
               <a href={TESTFLIGHT_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <span>Download Free</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
               </a>
               <a href="#how-it-works" className="btn-secondary">See How It Works</a>
-            </div>
-
-            <div className="hero-stats">
-              <div className="hero-stat">
-                <span className="stat-value">{formatNumber(stats.completedMatchups)}</span>
-                <span className="stat-label">Matchups Completed</span>
-              </div>
-              <div className="hero-stat">
-                <span className="stat-value">{formatNumber(stats.totalPlayers)}</span>
-                <span className="stat-label">Total Players</span>
-              </div>
-              <div className="hero-stat">
-                <span className="stat-value">{formatNumber(stats.tokensPlayed)}</span>
-                <span className="stat-label">Tokens Played</span>
-              </div>
             </div>
           </div>
 
@@ -433,7 +477,7 @@ function Home() {
                       <TeamLogo team="BOS" size={36} />
                       <span>Celtics</span>
                     </div>
-                  </div>
+          </div>
 
                   {/* Entry/Win Boxes */}
                   <div className="demo-entry-boxes" onClick={handleEntryClick}>
@@ -442,16 +486,16 @@ function Home() {
                       <div className="entry-box-value">
                         <Token type="gold" size="small" />
                         <span>10</span>
-                      </div>
-                    </div>
+            </div>
+            </div>
                     <div className="entry-box win">
                       <span className="entry-box-label">TO WIN</span>
                       <div className="entry-box-value">
                         <Token type="gold" size="small" />
                         <span>18</span>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+        </div>
 
                   {/* Live Indicator */}
                   <div className="demo-live">
@@ -598,64 +642,109 @@ function Home() {
           </svg>
         </div>
 
-        {/* How It Works */}
-        <section className="how-it-works animate-on-scroll" id="how-it-works">
+        {/* Two Ways to Play - 3D Experience */}
+        <section className="ways-to-play-section animate-on-scroll" id="how-it-works">
           <div className="section-header">
-            <h2>Two Ways to Play</h2>
-            <p>Sweepstakes model • No purchase necessary</p>
-          </div>
-
-          <div className="toggle-experience">
-            <div className="toggle-cards-container stagger-children animate-on-scroll">
+            <h2 className="section-title-3d">
+              <span className="title-layer">Two Ways to Play</span>
+            </h2>
+            <p className="section-subtitle-glow">Sweepstakes model • No purchase necessary</p>
+            </div>
+            
+          <div className="ways-to-play-stage">
+            {/* Toggle Switch - Original Style */}
+            <div className="toggle-wrapper">
               <div 
-                className={`toggle-card coins ${currencyMode === 'COINS' ? 'active' : ''}`}
+                className={`toggle-switch-3d ${currencyMode === 'CASH' ? 'cash' : 'coins'}`}
+                onClick={toggleCurrency}
+              >
+                <div className="toggle-bezel">
+                  <div className="toggle-track-bg gold"></div>
+                  <div className="toggle-track-bg green"></div>
+                  <div className="toggle-thumb">
+                    <Token type={currencyMode === 'CASH' ? 'green' : 'gold'} size="small" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 3D Floating Cards */}
+            <div className="currency-cards-3d">
+              <div 
+                className={`currency-card-3d coins ${currencyMode === 'COINS' ? 'active front' : 'back'}`}
                 onClick={() => setCurrencyMode('COINS')}
               >
-                <div className="toggle-card-glow"></div>
-                <Token type="gold" size="large" />
-                <h3>Match Coins</h3>
-                <span className="toggle-card-sub">Entertainment Currency</span>
-                <ul>
-                  <li>✓ Play for fun</li>
-                  <li>✓ Purchase packages</li>
-                  <li>✓ Entertainment only</li>
-                </ul>
-                <div className="toggle-card-cta">
-                  <span>Start Playing</span>
+                <div className="card-3d-inner">
+                  <div className="card-face front">
+                    <div className="card-shine"></div>
+                    <div className="card-content">
+                      <div className="floating-token">
+                        <Token type="gold" size="large" />
+                        <div className="token-glow gold"></div>
+                      </div>
+                      <h3>Match Coins</h3>
+                      <span className="card-badge">Entertainment</span>
+                      <div className="card-features">
+                        <div className="feature-item">
+                          <span className="feature-icon">🎮</span>
+                          <span>Play for fun</span>
+                        </div>
+                        <div className="feature-item">
+                          <span className="feature-icon">💰</span>
+                          <span>Purchase packages</span>
+                        </div>
+                        <div className="feature-item">
+                          <span className="feature-icon">✨</span>
+                          <span>Entertainment only</span>
+                        </div>
+                      </div>
+                      <button className="card-cta-3d gold">
+                        <span>Start Playing</span>
+                        <div className="cta-shine"></div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="toggle-center">
-                <div 
-                  className={`toggle-switch ${currencyMode === 'CASH' ? 'cash' : 'coins'}`}
-                  onClick={toggleCurrency}
-                >
-                  <div className="toggle-track-3d">
-                    <div className="toggle-track-fill coins"></div>
-                    <div className="toggle-track-fill cash"></div>
-                  </div>
-                  <div className="toggle-thumb-3d">
-                    <Token type={currencyMode === 'CASH' ? 'green' : 'gold'} size="medium" />
-                  </div>
-                </div>
-                <span className="toggle-hint">Click to switch</span>
+              <div className="vs-badge-3d">
+                <span>VS</span>
               </div>
 
               <div 
-                className={`toggle-card cash ${currencyMode === 'CASH' ? 'active' : ''}`}
+                className={`currency-card-3d cash ${currencyMode === 'CASH' ? 'active front' : 'back'}`}
                 onClick={() => setCurrencyMode('CASH')}
               >
-                <div className="toggle-card-glow green"></div>
-                <Token type="green" size="large" />
-                <h3>Match Cash</h3>
-                <span className="toggle-card-sub">Prize Currency</span>
-                <ul>
-                  <li>✓ FREE bonus only</li>
-                  <li>✓ Real prizes eligible</li>
-                  <li>✓ Subject to terms</li>
-                </ul>
-                <div className="toggle-card-cta green">
-                  <span>Win Prizes</span>
+                <div className="card-3d-inner">
+                  <div className="card-face front">
+                    <div className="card-shine"></div>
+                    <div className="card-content">
+                      <div className="floating-token">
+                        <Token type="green" size="large" />
+                        <div className="token-glow green"></div>
+                      </div>
+                      <h3>Match Cash</h3>
+                      <span className="card-badge green">Prizes</span>
+                      <div className="card-features">
+                        <div className="feature-item">
+                          <span className="feature-icon">🎁</span>
+                          <span>FREE bonus only</span>
+                        </div>
+                        <div className="feature-item">
+                          <span className="feature-icon">🏆</span>
+                          <span>Real prizes eligible</span>
+                        </div>
+                        <div className="feature-item">
+                          <span className="feature-icon">📋</span>
+                          <span>Subject to terms</span>
+                        </div>
+                      </div>
+                      <button className="card-cta-3d green">
+                        <span>Win Prizes</span>
+                        <div className="cta-shine"></div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -712,8 +801,8 @@ function Home() {
               <div className="referral-code">
                 <span className="code-label">YOUR CODE</span>
                 <span className="code-value">IN-APP</span>
-              </div>
             </div>
+          </div>
 
             {/* Welcome Bonus */}
             <div className="token-reward-card welcome">
@@ -856,8 +945,8 @@ function Home() {
                     {sentTaunt === taunt.emoji && <span className="taunt-sent-badge">Sent!</span>}
                   </button>
                 ))}
-              </div>
             </div>
+          </div>
 
             {/* Leaderboard */}
             <div className="social-card leaderboard-full">
@@ -890,10 +979,10 @@ function Home() {
                       <RatingIcon size={10} />
                       <span>{player.rating}</span>
                     </div>
-                  </div>
-                ))}
-              </div>
             </div>
+                ))}
+            </div>
+          </div>
           </div>
         </section>
 
