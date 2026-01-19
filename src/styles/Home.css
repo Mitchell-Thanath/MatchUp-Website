@@ -3700,6 +3700,110 @@
   .flow-diagram { flex-direction: column; gap: 10px; }
   .flow-arrow { transform: rotate(90deg); }
 
+  /* Ways to Play Section Mobile */
+  .ways-to-play-section {
+    padding: 60px 16px 80px;
+  }
+
+  .ways-to-play-stage {
+    gap: 30px;
+  }
+
+  .section-title-3d {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle-glow {
+    font-size: 0.85rem;
+  }
+
+  .toggle-wrapper {
+    margin-bottom: 30px;
+  }
+
+  /* Currency Cards 3D - Mobile Stack */
+  .currency-cards-3d {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .currency-card-3d {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .currency-card-3d:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .currency-card-3d.active {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  .currency-card-3d.back {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+
+  .card-content {
+    padding: 24px 20px;
+  }
+
+  .currency-card-3d .card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .card-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .card-features {
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  .feature-item {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .feature-icon {
+    font-size: 16px;
+  }
+
+  .feature-item span:last-child {
+    font-size: 13px;
+  }
+
+  .card-cta-3d {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .floating-token {
+    transform: scale(0.85);
+  }
+
+  .vs-badge-3d {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin: -10px 0;
+    order: 1;
+  }
+
+  .currency-card-3d.coins {
+    order: 0;
+  }
+
+  .currency-card-3d.cash {
+    order: 2;
+  }
+
   /* Toggle Cards Mobile */
   .toggle-card {
     padding: 24px 18px;
@@ -3871,6 +3975,115 @@
   .nav-cta {
     padding: 6px 14px;
     font-size: 12px;
+  }
+
+  /* Ways to Play - Extra Small Mobile */
+  .ways-to-play-section {
+    padding: 50px 12px 60px;
+  }
+
+  .ways-to-play-stage {
+    gap: 24px;
+  }
+
+  .section-title-3d {
+    font-size: 1.4rem;
+  }
+
+  .section-subtitle-glow {
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+
+  .toggle-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .toggle-switch-3d {
+    width: 90px;
+    height: 45px;
+  }
+
+  .toggle-thumb {
+    width: 38px;
+    height: 38px;
+    top: 3.5px;
+    left: 3.5px;
+  }
+
+  .toggle-switch-3d.cash .toggle-thumb {
+    transform: translateX(44px);
+  }
+
+  .toggle-thumb .token {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .currency-cards-3d {
+    gap: 16px;
+    padding: 0;
+  }
+
+  .currency-card-3d {
+    max-width: 300px;
+  }
+
+  .card-face.front {
+    border-radius: 20px;
+  }
+
+  .card-content {
+    padding: 20px 16px;
+  }
+
+  .currency-card-3d .card-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-badge {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+
+  .card-features {
+    gap: 8px;
+    margin: 14px 0;
+  }
+
+  .feature-item {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .feature-icon {
+    font-size: 14px;
+  }
+
+  .feature-item span:last-child {
+    font-size: 12px;
+  }
+
+  .card-cta-3d {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .floating-token {
+    transform: scale(0.75);
+  }
+
+  .token-glow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vs-badge-3d {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+    margin: -8px 0;
   }
 
   .hero { 
@@ -4275,5 +4488,67 @@
 
   .stat-box-label {
     font-size: 8px;
+  }
+
+  /* Currency Cards - Extra Small */
+  .ways-to-play-section {
+    padding: 40px 10px 50px;
+  }
+
+  .section-title-3d {
+    font-size: 1.2rem;
+  }
+
+  .section-subtitle-glow {
+    font-size: 0.75rem;
+  }
+
+  .currency-card-3d {
+    max-width: 280px;
+  }
+
+  .card-face.front {
+    border-radius: 16px;
+  }
+
+  .card-content {
+    padding: 18px 14px;
+  }
+
+  .currency-card-3d .card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-features {
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .feature-item {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .feature-icon {
+    font-size: 12px;
+  }
+
+  .feature-item span:last-child {
+    font-size: 11px;
+  }
+
+  .card-cta-3d {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .floating-token {
+    transform: scale(0.65);
+  }
+
+  .vs-badge-3d {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
   }
 }
