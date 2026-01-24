@@ -35,7 +35,7 @@ function GameRules() {
             <h3>1.1 Prediction Submission</h3>
             <p><strong>No Cancellations:</strong> Once predictions are submitted for a matchup, they cannot be canceled, edited, or withdrawn.</p>
             <p><strong>Prediction Lock:</strong> All predictions automatically lock when the first associated sporting event begins. Any matchup with locked predictions cannot be modified.</p>
-            <p><strong>Auto-Pick System:</strong> If you fail to submit predictions before a matchup locks, the system will NOT automatically pick for you. The matchup will be marked as inactive and your entry fee will be refunded.</p>
+            <p><strong>Auto-Pick System:</strong> If you fail to submit predictions before a matchup locks, the system will automatically pick for you.</p>
 
             <h3>1.2 Matchup Structure</h3>
             <h4>1.2.1 User Draft</h4>
