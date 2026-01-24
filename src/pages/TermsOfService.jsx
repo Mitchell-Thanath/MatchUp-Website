@@ -123,6 +123,24 @@ const TermsOfService = () => {
             <p>If your net winnings exceed $600 in a calendar year, Matchup will make available to you an IRS Form 1099-MISC as required by law. Such form will be provided electronically through your account Settings tab and is expected to be released on or around January 25 of the following calendar year. An automated process may run periodically through the end of January to account for processing delays.</p>
             <p>It is your responsibility to monitor your account and obtain the applicable tax documentation. If you do not receive your Form 1099-MISC by the end of January, you must contact Matchup support to request the document.</p>
             <p>Matchup does not provide tax advice, does not prepare or file tax returns on your behalf, and assumes no responsibility for your failure to obtain, report, or properly file any required tax forms.</p>
+            
+            <h3>5.5 Withdrawals</h3>
+            <p><strong>Withdrawal Limits:</strong> Withdrawals are subject to a maximum limit of Three Hundred U.S. Dollars ($300) per user per calendar day, calculated based on Eastern Time (ET). Any withdrawal requests exceeding this limit will be declined or deferred to a subsequent day, at the Company's sole discretion. The Company reserves the right to aggregate withdrawals across multiple transactions to enforce daily limits.</p>
+            <p><strong>Withdrawal Conditions:</strong> All withdrawals are subject to these Terms and Conditions and any additional policies referenced herein. Withdrawal requests are not guaranteed and may be delayed, suspended, limited, or denied based on, including but not limited to:</p>
+            <ul>
+              <li>Account verification requirements</li>
+              <li>Compliance with applicable laws and regulations</li>
+              <li>Suspected fraud, abuse, or manipulation</li>
+              <li>Technical, operational, or security issues</li>
+              <li>Violations of these Terms</li>
+            </ul>
+            <p>The Company's determination regarding withdrawals shall be final and binding to the extent permitted by law.</p>
+            
+            <h3>5.6 Florida Prizes and Sweepstakes</h3>
+            <p>The following provisions apply specifically to participants located in the State of Florida:</p>
+            <p><strong>Sweepstakes Period:</strong> Each sweepstakes promotion offered through the App (each, a "Sweepstakes") begins at 12:00:00 AM Eastern Time ("ET") and ends at 11:59:59 PM ET on the same calendar day ("Sweepstakes Period"). Each Sweepstakes is a separate and distinct promotion, offered daily, and is not combined with or carried over to any prior or subsequent Sweepstakes Period.</p>
+            <p><strong>Prize Limits:</strong> The total aggregate retail value of all prizes awarded to participants located in the State of Florida during any single Sweepstakes Period shall not exceed Five Thousand U.S. Dollars ($5,000). Under no circumstances shall the total prize value awarded in Florida during any Sweepstakes Period exceed $5,000, regardless of participation levels, entry volume, or outcomes.</p>
+            <p><strong>Florida Residents:</strong> Sweepstakes offered to Florida residents are intended to comply with applicable Florida laws and regulations. In the event of any conflict between these Terms and applicable law, the applicable law shall control. The Company reserves the right to modify, suspend, or cancel any Sweepstakes offered in Florida to maintain legal compliance.</p>
           </section>
 
           <section className="policy-section">
