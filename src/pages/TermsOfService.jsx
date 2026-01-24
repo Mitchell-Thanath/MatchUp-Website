@@ -17,10 +17,10 @@ const TermsOfService = () => {
         
         <main className="privacy-content">
           <h1 className="privacy-title">Matchup Terms of Use</h1>
-          <p className="last-updated">Last Updated: November 29, 2025</p>
+          <p className="last-updated">Last Updated: Jannuary 24, 2026</p>
           
           <section className="policy-section important-notice">
-            <p><strong>IMPORTANT NOTICE:</strong> THESE TERMS OF USE CONTAIN A BINDING ARBITRATION PROVISION AND CLASS ACTION WAIVER (SECTION 20). PLEASE READ THEM CAREFULLY. THEY AFFECT YOUR LEGAL RIGHTS.</p>
+            <p><strong>IMPORTANT NOTICE:</strong> THESE TERMS OF USE CONTAIN A BINDING ARBITRATION PROVISION AND CLASS ACTION WAIVER. PLEASE READ THEM CAREFULLY. THEY AFFECT YOUR LEGAL RIGHTS.</p>
           </section>
 
           <section className="policy-section">
@@ -44,9 +44,9 @@ const TermsOfService = () => {
             
             <p><strong>Match Cash (Sweepstakes Play):</strong> VOID WHERE PROHIBITED. Participation in Match Cash is subject to both location-based (geofencing) and identity-based (ID verification) eligibility restrictions.</p>
             
-            <p><strong>Geofencing Restrictions (Physical Location):</strong> Participation is strictly prohibited if you are physically located in any of the following states, regardless of residency or identity verification status: Alabama, Arizona, Colorado, Connecticut, Hawaii, Kentucky, Louisiana, Mississippi, Montana, Nevada, New Jersey, Ohio, Tennessee, West Virginia, California, Florida, New York, Washington, Michigan, Idaho, North Carolina, Rhode Island (collectively, the "Geofenced States"). Access from these states is blocked through geolocation controls.</p>
+            <p><strong>Geofencing Restrictions (Physical Location):</strong> Participation is strictly prohibited if you are physically located in any of the following states, regardless of residency or identity verification status: Alabama, Arizona, Colorado, Connecticut, Hawaii, Kentucky, Louisiana, Mississippi, Montana, Nevada, New Jersey, Ohio, Tennessee, West Virginia, California, New York, Washington, Michigan, Idaho, North Carolina, Rhode Island (collectively, the "Geofenced States"). Access from these states is blocked through geolocation controls.</p>
             
-            <p><strong>ID Verification Restrictions (Residency / Identification):</strong> Participation is also prohibited if a user's verified identity, residency, or government-issued identification indicates association with any of the following states, even if the user is not physically located in a Geofenced State at the time of access: Hawaii, Nevada, Tennessee, Washington, California, New York, Florida, Michigan, Idaho, Connecticut, Montana, New Jersey, Ohio, West Virginia, North Carolina, Rhode Island (collectively, the "ID-Restricted States").</p>
+            <p><strong>ID Verification Restrictions (Residency / Identification):</strong> Participation is also prohibited if a user's verified identity, residency, or government-issued identification indicates association with any of the following states, even if the user is not physically located in a Geofenced State at the time of access: Hawaii, Nevada, Tennessee, Washington, California, New York, Michigan, Idaho, Connecticut, Montana, New Jersey, Ohio, West Virginia, North Carolina, Rhode Island (collectively, the "ID-Restricted States").</p>
             
             <p>Participation is further void in any other jurisdiction where such sweepstakes or promotional contests are restricted or prohibited by law.</p>
             
@@ -105,10 +105,10 @@ const TermsOfService = () => {
             <h2>5. PRIZE REDEMPTION</h2>
             
             <h3>5.1 Minimum Threshold</h3>
-            <p>You must have a minimum balance of $10.00 worth of eligible Match Cash winnings to request a redemption.</p>
+            <p>You must have a minimum balance of $25.00 worth of eligible Match Cash winnings to request a redemption.</p>
             
-            <h3>5.2 Wagering Requirement</h3>
-            <p>All Match Cash must be played through at least once (1x) in a contest before it becomes eligible for redemption.</p>
+            <h3>5.2 Playthrough Requirement</h3>
+            <p>All Match Cash (excluding Token Store Purchase Bonus) must be played through at least once (1x) in a contest before it becomes eligible for redemption.</p>
             
             <h3>5.3 Verification</h3>
             <p>Before processing any redemption, we will require:</p>
@@ -180,6 +180,3 @@ const TermsOfService = () => {
 }
 
 export default TermsOfService
-
-
-
