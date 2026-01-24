@@ -21,22 +21,53 @@ function PrivacyPolicy() {
 
       <main className="privacy-content">
         <div className="privacy-header">
-          <h1>Privacy Policy</h1>
+          <h1>Matchup Privacy Policy</h1>
           <p className="last-updated">Effective Date: November 29, 2025</p>
         </div>
 
         <div className="privacy-body">
           <section className="policy-section intro-section">
             <p>
-              MatchUp DFS LLC. ("MatchUp," "we," "our," or "us") operates the MatchUp mobile application and related services (collectively, the "Platform"). We are committed to protecting your privacy and ensuring you understand how your information is handled. This Privacy Policy explains the types of Information we collect, how it is used, how it may be shared, and your rights regarding that Information.
-            </p>
-            <p>
-              By downloading, accessing, or using the Platform, you agree to the collection and use of your information in accordance with this Policy.
+              MatchUp DFS LLC. ("MatchUp," "we," "our," or "us") operates the MatchUp mobile application and related services (collectively, the "Platform").We are committed to protecting your privacy and ensuring you understand how your information is handled. This Privacy Policy explains the types of Information we collect, how it is used, how it may be shared, and your rights regarding that Information.By downloading, accessing, or using the Platform, you agree to the collection and use of your information in accordance with this Policy.
             </p>
           </section>
 
           <section className="policy-section">
-            <h2>1. Information We Collect</h2>
+            <h2>1. ELIGIBILITY</h2>
+            
+            <h3>A. Age</h3>
+            <p>
+              You must be at least 18 years old to use the Platform.
+            </p>
+
+            <h3>B. Location</h3>
+            <p>
+              You must be physically located in a jurisdiction where Matchup is permitted.
+            </p>
+            <p>
+              <strong>Match Coins (Social Play):</strong> Available in all 50 U.S. states.
+            </p>
+            <p>
+              <strong>Match Cash (Sweepstakes Play):</strong> VOID WHERE PROHIBITED. Participation in Match Cash is subject to both location-based (geofencing) and identity-based (ID verification) eligibility restrictions.
+            </p>
+            <p>
+              <strong>Geofencing Restrictions (Physical Location):</strong> Participation is strictly prohibited if you are physically located in any of the following states, regardless of residency or identity verification status: Alabama, Arizona, Colorado, Connecticut, Hawaii, Kentucky, Louisiana, Mississippi, Montana, Nevada, New Jersey, Ohio, Tennessee, West Virginia, California, New York, Washington, Michigan, Idaho, North Carolina, Rhode Island (collectively, the "Geofenced States"). Access from these states is blocked through geolocation controls.
+            </p>
+            <p>
+              <strong>ID Verification Restrictions (Residency / Identification):</strong> Participation is also prohibited if a user's verified identity, residency, or government-issued identification indicates association with any of the following states, even if the user is not physically located in a Geofenced State at the time of access: Hawaii, Nevada, Tennessee, Washington, California, New York, Michigan, Idaho, Connecticut, Montana, New Jersey, Ohio, West Virginia, North Carolina, Rhode Island (collectively, the "ID-Restricted States").
+            </p>
+            <p>
+              Participation is further void in any other jurisdiction where such sweepstakes or promotional contests are restricted or prohibited by law.
+            </p>
+
+            <h3>C. Verifications</h3>
+            <p>
+              We reserve the right to verify your age, identity, and location at any time. Failure to provide requested documentation will result in account suspension.
+            </p>
+          </section>
+
+          <section className="policy-section">
+            <h2>2. INFORMATION WE COLLECT</h2>
             <p>
               We collect different types of information to provide our services, ensure legal compliance for our sweepstakes model, and improve your experience.
             </p>
@@ -76,19 +107,27 @@ function PrivacyPolicy() {
           </section>
 
           <section className="policy-section">
-            <h2>2. How We Use Your Information</h2>
+            <h2>3. HOW WE USE YOUR INFORMATION</h2>
             <p>We use your data for the following purposes:</p>
-            <ul>
-              <li><strong>Service Provision:</strong> To create your account, process transactions, facilitate gameplay, and manage your "Match Coins" and "Match Cash" wallets.</li>
-              <li><strong>Legal Compliance:</strong> To verify your age (18+), identity, and location to ensure you are eligible to participate in our sweepstakes under applicable state and federal laws.</li>
-              <li><strong>Prize Redemption:</strong> To process redemption requests, file necessary tax forms (e.g., IRS Form 1099-MISC for winnings over $600), and prevent fraud.</li>
-              <li><strong>Communication:</strong> To send you transaction confirmations, security alerts, and optional promotional updates (which you can opt out of).</li>
-              <li><strong>Platform Improvement:</strong> To analyze usage trends, fix bugs, and enhance the gaming experience.</li>
-            </ul>
+            <p>
+              <strong>Service Provision:</strong> To create your account, process transactions, facilitate gameplay, and manage your "Match Coins" and "Match Cash" wallets.
+            </p>
+            <p>
+              <strong>Legal Compliance:</strong> To verify your age (18+), identity, and location to ensure you are eligible to participate in our sweepstakes under applicable state and federal laws.
+            </p>
+            <p>
+              <strong>Prize Redemption:</strong> To process redemption requests, file necessary tax forms (e.g., IRS Form 1099-MISC for winnings over $600), and prevent fraud.
+            </p>
+            <p>
+              <strong>Communication:</strong> To send you transaction confirmations, security alerts, and optional promotional updates (which you can opt out of).
+            </p>
+            <p>
+              <strong>Platform Improvement:</strong> To analyze usage trends, fix bugs, and enhance the gaming experience.
+            </p>
           </section>
 
           <section className="policy-section">
-            <h2>3. Sharing of Information</h2>
+            <h2>4. SHARING OF INFORMATION</h2>
             <p>We do not sell your Personal Data. We only share information in the following circumstances:</p>
             <p>
               <strong>Service Providers:</strong> We share data with trusted third parties who perform services on our behalf, including:
@@ -108,18 +147,20 @@ function PrivacyPolicy() {
           </section>
 
           <section className="policy-section">
-            <h2>4. Sweepstakes & Promotions</h2>
+            <h2>5. SWEEPSTAKES & PROMOTIONS</h2>
             <p>
               MatchUp operates a sweepstakes model where "Match Cash" can be used to participate in contests for a chance to win real prizes.
             </p>
-            <ul>
-              <li><strong>No Purchase Necessary:</strong> You can obtain Match Cash for free via Alternative Methods of Entry (AMOE), such as daily login bonuses or mail-in requests.</li>
-              <li><strong>Eligibility:</strong> Participation is void where prohibited by law. We use your location and identity data to strictly enforce these restrictions.</li>
-            </ul>
+            <p>
+              <strong>No Purchase Necessary:</strong> You can obtain Match Cash for free via Alternative Methods of Entry (AMOE), such as daily login bonuses or mail-in requests.
+            </p>
+            <p>
+              <strong>Eligibility:</strong> Participation is void where prohibited by law. We use your location and identity data to strictly enforce these restrictions.
+            </p>
           </section>
 
           <section className="policy-section">
-            <h2>5. Data Security & Retention</h2>
+            <h2>6. DATA SECURITY & RETENTION</h2>
             <p>
               We use industry-standard security measures (encryption, secure servers) to protect your data. However, no transmission over the internet is 100% secure.
             </p>
@@ -132,64 +173,29 @@ function PrivacyPolicy() {
           </section>
 
           <section className="policy-section">
-            <h2>6. Children's Privacy</h2>
+            <h2>7. CHILDREN'S PRIVACY</h2>
             <p>
               MatchUp is strictly for users aged 18 or older. We do not knowingly collect personal data from children under 18. If we discover a user is under 18, we will immediately delete their account and data.
             </p>
           </section>
 
           <section className="policy-section">
-            <h2>7. Your Choices</h2>
-            <ul>
-              <li><strong>Location:</strong> You can disable location services in your device settings, but this will prevent you from accessing Match Cash contests.</li>
-              <li><strong>Push Notifications:</strong> You can opt out of notifications in your device settings or the app's User Preferences.</li>
-              <li><strong>Marketing Emails:</strong> You can unsubscribe via the link in any promotional email.</li>
-            </ul>
+            <h2>8. YOUR CHOICES</h2>
+            <p>
+              <strong>Location:</strong> You can disable location services in your device settings, but this will prevent you from accessing Match Cash contests.
+            </p>
+            <p>
+              <strong>Push Notifications:</strong> You can opt out of notifications in your device settings or the app's User Preferences.
+            </p>
+            <p>
+              <strong>Marketing Emails:</strong> You can unsubscribe via the link in any promotional email.
+            </p>
           </section>
 
           <section className="policy-section">
-            <h2>8. Contact Us</h2>
+            <h2>9. CONTACT US</h2>
             <p>
               If you have questions about this Privacy Policy or your data, please contact us at <a href="mailto:matchup@matchupdfs.com">matchup@matchupdfs.com</a> with "Privacy" in the subject line of your email.
-            </p>
-          </section>
-
-          {/* Terms of Use Section */}
-          <div className="terms-divider">
-            <span>Terms of Use</span>
-          </div>
-
-          <div className="privacy-header terms-header">
-            <h1>Terms of Use</h1>
-            <p className="last-updated">Last Updated: November 29, 2025</p>
-          </div>
-
-          <section className="policy-section warning-section">
-            <p>
-              <strong>IMPORTANT NOTICE:</strong> THESE TERMS OF USE CONTAIN A BINDING ARBITRATION PROVISION AND CLASS ACTION WAIVER (SECTION 20). PLEASE READ THEM CAREFULLY. THEY AFFECT YOUR LEGAL RIGHTS.
-            </p>
-            <p>
-              These Terms of Use ("Terms") constitute a binding legal agreement between you ("User," "You," or "Participant") and Matchup DFS LLC. ("Matchup," "We," "Us," or "Company"). These Terms govern your access to and use of the Matchup mobile application, website, and related services (collectively, the "Platform"). NO PURCHASE NECESSARY TO ENTER OR WIN.
-            </p>
-            <p>
-              Matchup offers a social gaming platform. While you can purchase "Match Coins" for entertainment, "Match Cash" (which can be redeemed for prizes) cannot be purchased and is always available for free via alternative methods of entry. MATCHUP IS NOT A GAMBLING PLATFORM.
-            </p>
-          </section>
-
-          <section className="policy-section">
-            <h2>1. Eligibility</h2>
-            <p>
-              <strong>1.1 Age:</strong> You must be at least 18 years old to use the Platform.
-            </p>
-            <p>
-              <strong>1.2 Location:</strong> You must be physically located in a jurisdiction where Matchup is permitted.
-            </p>
-            <ul>
-              <li><strong>Match Coins (Social Play):</strong> Available in all 50 U.S. states.</li>
-              <li><strong>Match Cash (Sweepstakes Play):</strong> VOID WHERE PROHIBITED. Participation is strictly prohibited if you are physically located in Washington (WA), Idaho (ID), Michigan (MI), Montana (MT), Connecticut (CT), Nevada (NV), New York (NY), New Jersey (NJ), California (CA), or any other jurisdiction where such participation is restricted by law (collectively, "Excluded Territories").</li>
-            </ul>
-            <p>
-              <strong>1.3 Verification:</strong> We reserve the right to verify your age, identity, and location at any time. Failure to provide requested documentation will result in account suspension.
             </p>
           </section>
         </div>
