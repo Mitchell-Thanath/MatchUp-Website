@@ -22,7 +22,7 @@ function PrivacyPolicy() {
       <main className="privacy-content">
         <div className="privacy-header">
           <h1>Matchup Privacy Policy</h1>
-          <p className="last-updated">Effective Date: November 29, 2025</p>
+          <p className="last-updated">Effective Date: January 25, 2026</p>
         </div>
 
         <div className="privacy-body">
@@ -104,6 +104,19 @@ function PrivacyPolicy() {
             <p>
               <strong>Avatars:</strong> User avatars on MatchUp are created using pre-set customization options (e.g., selecting a jersey, hairstyle, or team). We do not use facial scans to generate these images.
             </p>
+
+            <h3>D. Financial Information (Plaid)</h3>
+            <p>
+              When you choose to link a bank account for prize redemptions or identity verification, we use Plaid Inc. ("Plaid") to securely connect to your financial institution. By linking your account, you authorize Plaid to access the following information from your financial institution:
+            </p>
+            <ul>
+              <li>Account Information: Account name, account type, and account number (masked)</li>
+              <li>Account Holder Information: Name and address associated with your account</li>
+              <li>Account Balance: Current and available balance (for verification purposes only)</li>
+            </ul>
+            <p>
+              <strong>Important:</strong> MatchUp does NOT store your bank login credentials. Plaid handles all connections securely using bank-level encryption. We only receive the verification status and limited account information necessary to process your redemption requests. You can revoke Plaid's access at any time through the <a href="https://my.plaid.com" target="_blank" rel="noopener noreferrer">Plaid Portal</a> or by contacting us.
+            </p>
           </section>
 
           <section className="policy-section">
@@ -133,10 +146,11 @@ function PrivacyPolicy() {
               <strong>Service Providers:</strong> We share data with trusted third parties who perform services on our behalf, including:
             </p>
             <ul>
-              <li><strong>Payment Processors:</strong> (e.g., Stripe) to process Match Coin package purchases.</li>
+              <li><strong>Financial Data Services:</strong> Plaid Inc. to securely verify your bank account for prize redemptions. Plaid's use of your data is governed by <a href="https://plaid.com/legal/#consumers" target="_blank" rel="noopener noreferrer">Plaid's Privacy Policy</a>.</li>
               <li><strong>Identity Verification:</strong> To verify your identity for redemptions.</li>
               <li><strong>Geolocation Services:</strong> To verify your physical location for legal compliance.</li>
               <li><strong>Hosting & Database:</strong> (e.g., Supabase) to securely store user data.</li>
+              <li><strong>Payment Processors:</strong> To process Match Coin package purchases.</li>
             </ul>
             <p>
               <strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or government request, or to protect the rights, property, and safety of MatchUp, our users, or the public.
